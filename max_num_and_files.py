@@ -16,12 +16,11 @@ def search(inp_list, first_max_num,second_max_num,idx):
     return search(inp_list,first_max_num,second_max_num,idx + 1)
 
 def find_max_num(inp_list):
-    if len(inp_list) == 0:
-        message = "list is empty!"
-        return message
 
-    if len(inp_list) ==1:
-        print("there is one element in the list: ")
+    if len(inp_list) == 0:
+        return None
+
+    if len(inp_list) == 1:
         return inp_list[0]
 
     if inp_list[0] > inp_list[1]:
@@ -33,7 +32,7 @@ def find_max_num(inp_list):
     result = search(inp_list,first_max_num,second_max_num,2)
 
     return result
-print(find_max_num([9]))
+
 # 8 задание:
 def show_dir_and_files(way_name):
     print(os.listdir(way_name))
