@@ -12,11 +12,9 @@ def search(inp_list, first_max_num,second_max_num,idx):
     if idx >= len(inp_list) - 1:
         return second_max_num
 
-
     return search(inp_list,first_max_num,second_max_num,idx + 1)
 
 def find_max_num(inp_list):
-    idx = 2
 
     if inp_list[0] > inp_list[1]:
         first_max_num = inp_list[0]
@@ -24,7 +22,7 @@ def find_max_num(inp_list):
     else:
         first_max_num = inp_list[1]
         second_max_num = inp_list[0]
-    result = search(inp_list,first_max_num,second_max_num,idx)
+    result = search(inp_list,first_max_num,second_max_num,2)
 
     return result
 
