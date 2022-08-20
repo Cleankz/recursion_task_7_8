@@ -14,6 +14,7 @@ import os.path
 #     return search(inp_list,first_max_num,idx + 1)
 
 def find_max_num(inp_list):
+
     first_max_num = inp_list[len(inp_list)//2]
     second_max_num = inp_list[len(inp_list)//2]
 
@@ -23,9 +24,6 @@ def find_max_num(inp_list):
         if inp_list[i] >= first_max_num:
             second_max_num = first_max_num
             first_max_num = inp_list[i]
-        # if inp_list[i] <= second_max_num and inp_list[i] != first_max_num:
-        #     second_max_num = inp_list[i]
-            
 
     return second_max_num
 # 8 задание:
