@@ -15,15 +15,19 @@ import os.path
 
 def find_max_num(inp_list):
 
-    first_max_num = inp_list[len(inp_list)//2]
-    second_max_num = inp_list[len(inp_list)//2]
+    if inp_list[0] > inp_list[1]:
+        first_max_num = inp_list[0]
+        second_max_num = inp_list[1]
+    else:
+        first_max_num = inp_list[1]
+        second_max_num = inp_list[0]
 
-    for i in range(len(inp_list)):
-        if inp_list[i] >= second_max_num and inp_list[i] != first_max_num:
-                second_max_num = inp_list[i]
+    for i in range(2,len(inp_list)):
         if inp_list[i] >= first_max_num:
             second_max_num = first_max_num
             first_max_num = inp_list[i]
+        elif inp_list[i] > second_max_num:
+            second_max_num = inp_list[i]
 
     return second_max_num
 # 8 задание:
